@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Include Header
-    fetch("./include/header.html")
-    .then(response => {
-        return response.text();
-    })
-    .then(data => {
-        document.querySelector("header").innerHTML = data;
-    });
     
     const dataContainer = document.getElementById('data-container');
 
@@ -33,28 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataHtml = `
             <div>
                 <h2>Location Information</h2>
-                <p><strong>City:</strong> ${city}</p>
-                <p><strong>State:</strong> ${state}</p>
-                <p><strong>Country:</strong> ${country}</p>
-                <p><strong>Coordinates:</strong> ${location.coordinates.join(', ')}</p>
+                <p class="data"><strong>City:</strong> ${city}</p>
+                <p class="data"><strong>State:</strong> ${state}</p>
+                <p class="data"><strong>Country:</strong> ${country}</p>
+                <p class="data"><strong>Coordinates:</strong> ${location.coordinates.join(', ')}</p>
             </div>
             <div>
                 <h2>Current Pollution</h2>
-                <p><strong>Timestamp:</strong> ${pollution.ts}</p>
-                <p><strong>AQI US:</strong> ${pollution.aqius}</p>
-                <p><strong>Main Pollutant US:</strong> ${pollution.mainus}</p>
-                <p><strong>AQI CN:</strong> ${pollution.aqicn}</p>
-                <p><strong>Main Pollutant CN:</strong> ${pollution.maincn}</p>
+                <p class="data"><strong>Timestamp:</strong> ${pollution.ts}</p>
+                <p class="data"><strong>AQI US:</strong> ${pollution.aqius}</p>
+                <p class="data"><strong>Main Pollutant US:</strong> ${pollution.mainus}</p>
+                <p class="data"><strong>AQI CN:</strong> ${pollution.aqicn}</p>
+                <p class="data"><strong>Main Pollutant CN:</strong> ${pollution.maincn}</p>
             </div>
             <div>
                 <h2>Current Weather</h2>
-                <p><strong>Timestamp:</strong> ${weather.ts}</p>
-                <p><strong>Temperature:</strong> ${weather.tp}°C</p>
-                <p><strong>Pressure:</strong> ${weather.pr} hPa</p>
-                <p><strong>Humidity:</strong> ${weather.hu}%</p>
-                <p><strong>Wind Speed:</strong> ${weather.ws} m/s</p>
-                <p><strong>Wind Direction:</strong> ${weather.wd}°</p>
-                <p><strong>Weather Icon:</strong> <img src="http://openweathermap.org/img/wn/${weather.ic}@2x.png" alt="Weather Icon"></p>
+                <p class="data"><strong>Timestamp:</strong> ${weather.ts}</p>
+                <p class="data"><strong>Temperature:</strong> ${weather.tp}°C</p>
+                <p class="data"><strong>Pressure:</strong> ${weather.pr} hPa</p>
+                <p class="data"><strong>Humidity:</strong> ${weather.hu}%</p>
+                <p class="data"><strong>Wind Speed:</strong> ${weather.ws} m/s</p>
+                <p class="data"><strong>Wind Direction:</strong> ${weather.wd}°</p>
+                <p class="data"><strong>Weather Icon:</strong> <img src="http://openweathermap.org/img/wn/${weather.ic}@2x.png" alt="Weather Icon"></p>
             </div>
         `;
         dataContainer.innerHTML = dataHtml;

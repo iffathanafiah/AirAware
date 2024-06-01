@@ -1,28 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Air Quality Index</title>
         <link rel="stylesheet" href="\leaflet\leaflet.css" />
         <script src="\leaflet\leaflet.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
         <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <style>
             #map { 
-                height: 550px; 
-                width: 1000px;
-                float: right;
+                height: 640px; 
+                width: 1280px;
+                display: block;
+                margin: auto;
+            }
+            h1{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 64px;
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 40px;
+                margin-left: 8%;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+            .data{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                margin-left: 8%;
+            }
+            .subheadingcenter{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: grey;
+                font-size: 24px;
+            }
+            .subheading{
+                font-family: Arial, Helvetica, sans-serif;
+                color: grey;
+                font-size: 24px;
+                margin-left: 8%;
+            }
+            .button {
+                background-color: black;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                display: block;
+                font-size: 16px;
+                margin: auto;
+                width: 76px;
+                cursor: pointer;
+                border-radius: 8px;
+            }
+            .buttonheader {
+                border: none;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .container {
+                height: 200px;
+                position: relative;
+            }
+            .mapcontainer {
+                height: 700px;
+                position: relative;
+                padding-top: 30px;
             }
         </style>
     </head>
     <body>
-        <div id="header"></div>
-        <h1>Air Quality Index</h1>
-        <div style="float: left" name="airvisual_widget" key="664f1d079f1d38f96d4e5bb1"></div>
-        <div style="float: left"><p><span id="data-container"></span></p></div>
-        <div style="float: left" id="city"><p></p></div>
-        <div id="map"></div>
-        <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+        <!--Header-->
+        <div id="header-placeholder"></div>
+        <script src="includeHeader.js"></script>
+    
+        <!--Landing Title-->
+        <div id="landingtitle" style="padding-top: 5%;">
+            <h1>Air Quality Index</h1>
+            <p class="subheadingcenter">Measurements for reporting air quality</p>
+            <div class="container">
+                <a href="#map-container" class="button">See Maps</a>
+            </div>
+        </div>
+
+        <!--Maps-->
+        <div class="mapcontainer" id="map-container">
+            <div id="map" style="border-radius: 8px;"></div>
+        </div>
+
+        <!--Widgets-->
+        <div id="widgetcontainer" style="margin: auto; padding-bottom: 10%;">
+            <h2>AQI Summary</h2>
+            <p class="subheading">Reports from the nearest states</p>
+            <div style="padding-left: 8%;">
+                <!--1-->
+                <div style="display: inline-block;" name="airvisual_widget" key="665ada09cd876849c3e21e61"></div>
+                <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+                <!--2-->
+                <div style="display: inline-block;" name="airvisual_widget" key="665ade71126fb22dbd624983"></div>
+                <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+                <!--3-->
+                <div style="display: inline-block;" name="airvisual_widget" key="665adf5218880af26fd95c62"></div>
+                <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div id="footer-placeholder"></div>
+        <script src="includeFooter.js"></script>
+        
         <script>
             //Get specified city data
             var requestOptions = {
