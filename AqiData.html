@@ -1,2 +1,52 @@
-<!--Data-->
-<div style="position: relative;"><p><span id="data-container"></span></p></div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AirAware - AQI Data</title>
+        <link rel="stylesheet" href="/style/style.css"/>
+        <script src="/script/script.js"></script>
+    </head>
+    <body>
+        <!--Header-->
+        <div id="header-placeholder"></div>
+
+        <!--Data
+        <div style="position: relative;"><p><span id="data-container"></span></p></div>
+        -->
+        <!--Landing Title-->
+        <div id="landingtitle" style="padding-top: 5%;">
+            <h1 style="padding-left: 8%;">AQI Data</h1>
+            <p style="padding-left: 8%; color: #828282; font-size: 24px;">Collected from stations</p>
+            <!--Select Box-->
+            <form action="" id="CountryForm">
+                <label>Select Country:</label>
+                    <select name="country" id="country">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Brunei">Brunei Darussalam</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="LaoPDR">Lao PDR</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="TimorLeste">Timor Leste</option>
+                        <option value="Vietnam">Vietnam</option>
+                    </select>
+                    <br>
+                    <button type="submit" img src=""></button>
+            </form>
+        </div>
+
+        <div>
+            <!--Country-->
+            <div id="country-placeholder"></div>
+            <script>insertAirVisualWidget('widget-container');</script>
+        </div>
+
+        <!--Footer-->
+        <div id="footer-placeholder"></div>
+    </body>
+</html>
