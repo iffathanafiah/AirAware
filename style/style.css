@@ -79,23 +79,24 @@ select{
     position: relative;
     padding-top: 30px;
 }
-.widgetright {
-    float: right;
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 1000;
+.widget {
+    flex: 2;
+    height: 300px;
 }
-.widgetleft {
-    float: left;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+.image {
+    flex: 3;
+    width: 50%;
+    height: 300px;
+    object-fit: contain;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .countrywidget {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    width: 84%;
+    gap: 25px;
+    display: flex;
+    padding-left: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 #mapSearchContainer{
     position:fixed;
