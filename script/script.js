@@ -1,6 +1,6 @@
 // includeHeader
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/include/header.html')
+    fetch('./include/header.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // includeFooter
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/include/footer.html')
+    fetch('./include/footer.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
