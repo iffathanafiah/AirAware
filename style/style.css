@@ -63,6 +63,14 @@ select{
     cursor: pointer;
     border-radius: 8px;
 }
+.search {
+    padding: 12px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-image: url("/attachments/searchlogo.png");
+    background-size: 100% 100%;
+    background-clip:padding-box;
+}
 .buttonheader {
     border: none;
     color: black;
