@@ -26,6 +26,46 @@ label{
     color: #828282;
     font-size: 24px;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+th,td {
+    border: 2px solid;
+    padding: 1%;
+    border-color: black;
+}
+tr.green {
+    background-color: rgb(0, 228, 0);
+    color: black;
+}
+tr.yellow {
+    background-color:yellow;
+    color: black;
+}
+tr.orange {
+    background-color: rgb(225, 126, 0);
+    color: white;
+}
+tr.red {
+    background-color: red;
+    color: white;
+}
+tr.purple {
+    background-color: rgb(143, 63, 151);
+    color: white;
+}
+tr.maroon {
+    background-color: rgb(126, 0, 35);
+    color: white;
+}
+.tablediv {
+    padding-left: 8%;
+    padding-right: 8%;
+}
 select{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;

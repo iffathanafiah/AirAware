@@ -32,6 +32,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
+//Map in index.html
+//Get specified city data
+var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+    };  
+var map = L.map('map').setView([4.193222, 108.280748], 6.4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19,attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+
+//Coordinates Popup
+var popup = L.popup();
+function onMapClick(e) {
+    popup
+    .setLatLng(e.latlng)
+    .setContent("You clicked the map at " + e.latlng.toString())
+    .openOn(map);
+}
+map.on('click', onMapClick);
+
+//AQI Overlay for Map
+var  WAQI_URL  =  "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=48082c7b86e4b16547905e3967c988f63bbe124d";  
+var  WAQI_ATTR  =  'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';  
+var  waqiLayer  =  L.tileLayer(WAQI_URL,  {  attribution:  WAQI_ATTR  });
+map.addLayer(waqiLayer);
+
 //IQAir API
 document.addEventListener('DOMContentLoaded', () => {
     
