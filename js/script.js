@@ -114,3 +114,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and display data on page load
     fetchData();
 });
+
+//Select Form
+function getOption(event) {
+
+    event.preventDefault(); // Prevent form submission
+
+    selectElement = document.querySelector('#country');
+    output =
+        selectElement.options
+        [selectElement.selectedIndex].value;
+    document.querySelector('.output').textContent = output;
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }

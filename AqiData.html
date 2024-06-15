@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AirAware - AQI Data</title>
         <link rel="stylesheet" href="./style/style.css"/>
-        <script src="./script/script.js"></script>
+        <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
     </head>
     <body style="margin: 0%;">
         <!--Header-->
@@ -18,33 +18,59 @@
         <div id="landingtitle" style="padding-top: 10%;">
             <h1 style="padding-left: 8%;">AQI Data</h1>
             <p style="padding-left: 8%; color: #828282; font-size: 24px;">Collected from stations</p>
-            <!--Select Box-->
-            <form action="" id="CountryForm">
+            <!--DropDown-->
+            <div>
+                <div style="display: inline-block; padding-left: 7%; width: 12%; padding-bottom: 1%;">
                 <label>Select Country:</label>
-                    <select name="country" id="country">
-                        <option value="" disabled selected>Select your option</option>
-                        <option value="Brunei">Brunei Darussalam</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="LaoPDR">Lao PDR</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Philippines">Philippines</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="TimorLeste">Timor Leste</option>
-                        <option value="Vietnam">Vietnam</option>
-                    </select>
-                    <button class="search" type="submit"></button>
-            </form>
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Select your option</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#Brunei">Brunei Darussalam</a>
+                            <a href="#Cambodia">Cambodia</a>
+                            <a href="#IndonesiaDiv">Indonesia</a>
+                            <a href="#LaoPDR">Lao PDR</a>
+                            <a href="#MalaysiaDiv">Malaysia</a>
+                            <a href="#Myanmar">Myanmar</a>
+                            <a href="#Philippines">Philippines</a>
+                            <a href="#Singapore">Singapore</a>
+                            <a href="#ThailandDiv">Thailand</a>
+                            <a href="#TimorLeste">Timor Leste</a>
+                            <a href="#Vietnam">Vietnam</a>
+                        </div>
+                </div>
+            </div>
         </div>
+        <hr style="width: 85%;">
+        <div style="padding-left: 8%; z-index: 0;">
+            <p> The value of the option selected is:
+                <span class="output"></span>
+            </p>
+            <!--Indonesia-->
+            <div id="IndonesiaDiv">
+                <p id="Indonesia" style="font-size: 24px; font-weight: bold;">Indonesia</p>
+                <div id="Aceh" class="locationwidget" name="airvisual_widget" key="666d1dcdb06f3265fc6c26e1"></div>
+                <div id="Bali" class="locationwidget" name="airvisual_widget" key="666d1e2c458126dc74fff57b"></div>
+                <div id="Jakarta" class="locationwidget" name="airvisual_widget" key="665ade71126fb22dbd624983"></div>
+                <div id="North Sumatra" class="locationwidget" name="airvisual_widget" key="666d1ebab06f3265fc6c31f0"></div>
+            </div>
+            <!--Malaysia-->
+            <div id="MalaysiaDiv">
+                <div><p id="Malaysia" style="font-size: 24px; font-weight: bold;">Malaysia</p></div>
+                <div id="Johor" class="locationwidget" name="airvisual_widget" key="66642e13deedfe24da0742bd"></div>
+                <div id="Kedah" class="locationwidget" name="airvisual_widget" key="66642f0674fa1ac0d70736cf"></div>
+                <div id="KL" class="locationwidget" name="airvisual_widget" key="665afb1ad8af85c372c62229"></div>
+                <div id="Sabah" class="locationwidget" name="airvisual_widget" key="666432c3992137aaad8a2104"></div>
+            </div>
+            <!--Thailand-->
+            <div id="ThailandDiv">
+                <p id="Thailand" style="font-size: 24px; font-weight: bold;">Thailand</p>
+                <div id="Bangkok" class="locationwidget" name="airvisual_widget" key="665adf5218880af26fd95c62"></div>
 
-        <div>
-            <!--Country-->
-            <div id="country-placeholder"></div>
-            <script>insertAirVisualWidget('widget-container');</script>
+            </div>
         </div>
-
+        <script src="./js/script.js"></script>
+        <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
         <!--Footer-->
         <div id="footer-placeholder"></div>
     </body>
