@@ -10,14 +10,10 @@
     <body style="margin: 0%;">
         <!--Header-->
         <div id="header-placeholder"></div>
-
-        <!--Data
-        <div style="position: relative;"><p><span id="data-container"></span></p></div>
-        -->
         <!--Landing Title-->
         <div id="landingtitle" style="padding-top: 10%;">
             <h1 style="padding-left: 8%;">AQI Data</h1>
-            <p style="padding-left: 8%; color: #828282; font-size: 24px;">Collected from stations</p>
+            <p style="padding-left: 8%; color: #828282; font-size: 24px;">Collected from IQAir Stations</p>
             <!--DropDown-->
             <div>
                 <div style="display: inline-block; padding-left: 7%; width: 12%; padding-bottom: 1%;">
@@ -26,51 +22,124 @@
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Select your option</button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="#Brunei">Brunei Darussalam</a>
-                            <a href="#Cambodia">Cambodia</a>
+                            <a href="#BruneiDiv">Brunei Darussalam</a>
+                            <a href="#CambodiaDiv">Cambodia</a>
                             <a href="#IndonesiaDiv">Indonesia</a>
-                            <a href="#LaoPDR">Lao PDR</a>
+                            <a href="#LaosDiv">Lao PDR</a>
                             <a href="#MalaysiaDiv">Malaysia</a>
-                            <a href="#Myanmar">Myanmar</a>
-                            <a href="#Philippines">Philippines</a>
-                            <a href="#Singapore">Singapore</a>
+                            <a href="#MyanmarDiv">Myanmar</a>
+                            <a href="#PhilippinesDiv">Philippines</a>
+                            <a href="#SingaporeDiv">Singapore</a>
                             <a href="#ThailandDiv">Thailand</a>
-                            <a href="#TimorLeste">Timor Leste</a>
-                            <a href="#Vietnam">Vietnam</a>
+                            <a href="#TimorLesteDiv">Timor Leste</a>
+                            <a href="#VietnamDiv">Vietnam</a>
                         </div>
                 </div>
             </div>
         </div>
-        <hr style="width: 85%;">
+        <hr style="width: 85%; margin-top: 5%;">
         <div style="padding-left: 8%; z-index: 0;">
-            <p> The value of the option selected is:
-                <span class="output"></span>
-            </p>
+            <!--Brunei-->
+            <div id="BruneiDiv" class="countrydiv">
+                <p id="Brunei" style="font-size: 24px; font-weight: bold;">Brunei</p>
+                <div id="Belait" class="locationwidget" name="airvisual_widget" key="666ef727a9c04c0ddcb4c487"></div>
+                <div id="Brunei-Muara" class="locationwidget" name="airvisual_widget" key="666ef82952618b62244cda26"></div>
+                <div id="Temburong" class="locationwidget" name="airvisual_widget" key="666ef8815ee6943604cf346e"></div>
+                <div id="Tutong" class="locationwidget" name="airvisual_widget" key="666ef8bc0c83e6bf33ab1da6"></div>
+            </div>
+            <!--Cambodia-->
+            <div id="CambodiaDiv" class="countrydiv">
+                <p id="Cambodia" style="font-size: 24px; font-weight: bold;">Cambodia</p>
+                <div id="Battambang" class="locationwidget" name="airvisual_widget" key="666fe119fe577d3a92c06081"></div>
+                <div id="Kandal" class="locationwidget" name="airvisual_widget" key="666efaf6b979b19dbb064b31"></div>
+                <div id="Phnom Penh" class="locationwidget" name="airvisual_widget" key="666ef901b979b19dbb062d68"></div>
+                <div id="Prey Veng" class="locationwidget" name="airvisual_widget" key="666fe1542b7e8f9831212aba"></div>
+            </div>
             <!--Indonesia-->
-            <div id="IndonesiaDiv">
+            <div id="IndonesiaDiv" class="countrydiv">
                 <p id="Indonesia" style="font-size: 24px; font-weight: bold;">Indonesia</p>
                 <div id="Aceh" class="locationwidget" name="airvisual_widget" key="666d1dcdb06f3265fc6c26e1"></div>
                 <div id="Bali" class="locationwidget" name="airvisual_widget" key="666d1e2c458126dc74fff57b"></div>
                 <div id="Jakarta" class="locationwidget" name="airvisual_widget" key="665ade71126fb22dbd624983"></div>
                 <div id="North Sumatra" class="locationwidget" name="airvisual_widget" key="666d1ebab06f3265fc6c31f0"></div>
             </div>
+            <!--Laos-->
+            <div id="LaosDiv" class="countrydiv">
+                <p id="Laos" style="font-size: 24px; font-weight: bold;">Laos</p>
+                <div id="Champasak" class="locationwidget" name="airvisual_widget" key="666fe1e4fe577d3a92c067c4"></div>
+                <div id="Luang Prabang" class="locationwidget" name="airvisual_widget" key="666fe5e12584026f967ea6e0"></div>
+                <div id="Savannakhet" class="locationwidget" name="airvisual_widget" key="666fe66c2b7e8f9831216812"></div>
+                <div id="Vientiane" class="locationwidget" name="airvisual_widget" key="666fe6b2d0f94619c1f6bed2"></div>
+            </div>
             <!--Malaysia-->
-            <div id="MalaysiaDiv">
+            <div id="MalaysiaDiv" class="countrydiv">
                 <div><p id="Malaysia" style="font-size: 24px; font-weight: bold;">Malaysia</p></div>
                 <div id="Johor" class="locationwidget" name="airvisual_widget" key="66642e13deedfe24da0742bd"></div>
                 <div id="Kedah" class="locationwidget" name="airvisual_widget" key="66642f0674fa1ac0d70736cf"></div>
                 <div id="KL" class="locationwidget" name="airvisual_widget" key="665afb1ad8af85c372c62229"></div>
                 <div id="Sabah" class="locationwidget" name="airvisual_widget" key="666432c3992137aaad8a2104"></div>
             </div>
+            <!--Myanmar-->
+            <div id="MyanmarDiv" class="countrydiv">
+                <div><p id="Myanmar" style="font-size: 24px; font-weight: bold;">Myanmar</p></div>
+                <div id="Kachin" class="locationwidget" name="airvisual_widget" key="666fefa4d0f94619c1f7330b"></div>
+                <div id="Kayin" class="locationwidget" name="airvisual_widget" key="666feffae96d93a7a735d4cf"></div>
+                <div id="Mandalay" class="locationwidget" name="airvisual_widget" key="666ff020da7d326ba16f6936"></div>
+                <div id="Yangon" class="locationwidget" name="airvisual_widget" key="666ff04b52c2acfc5ac2c54f"></div>
+            </div>
+            <!--Philippines-->
+            <div id="PhilippinesDiv" class="countrydiv">
+                <div><p id="Philippines" style="font-size: 24px; font-weight: bold;">Philippines</p></div>
+                <div id="Calabarzon" class="locationwidget" name="airvisual_widget" key="666ff08ee96d93a7a735dbe6"></div>
+                <div id="Davao" class="locationwidget" name="airvisual_widget" key="666ff1d42584026f967f4376"></div>
+                <div id="Manila" class="locationwidget" name="airvisual_widget" key="666ff2012b7e8f983121ff0c"></div>
+                <div id="Northern Mindanao" class="locationwidget" name="airvisual_widget" key="666ff235a592755e532ad3d4"></div>
+            </div>
+            <!--Singapore-->
+            <div id="SingaporeDiv" class="countrydiv">
+                <p id="Singapore" style="font-size: 24px; font-weight: bold;">Singapore</p>
+                <div id="Singapore" class="locationwidget" name="airvisual_widget" key="666ff295690619fc69c537ce"></div>
+            </div>
             <!--Thailand-->
-            <div id="ThailandDiv">
+            <div id="ThailandDiv" class="countrydiv">
                 <p id="Thailand" style="font-size: 24px; font-weight: bold;">Thailand</p>
                 <div id="Bangkok" class="locationwidget" name="airvisual_widget" key="665adf5218880af26fd95c62"></div>
-
+                <div id="Chiang Mai" class="locationwidget" name="airvisual_widget" key="666ffa4d2b7e8f983122897d"></div>
+                <div id="Pattani" class="locationwidget" name="airvisual_widget" key="666ffa9e690619fc69c5b974"></div>
+                <div id="Phuket" class="locationwidget" name="airvisual_widget" key="666ffad92584026f967fd91d"></div>
+            </div>
+            <!--Timor Leste-->
+            <div id="TimorLesteDiv" class="countrydiv">
+                <p id="Timor Leste" style="font-size: 24px; font-weight: bold;">Timor Leste</p>
+                <div id="Cova Lima" class="locationwidget" name="airvisual_widget" key="666ffb542584026f967fe0f8"></div>
+                <div id="Dili" class="locationwidget" name="airvisual_widget" key="666ffb8a2b7e8f9831229d1f"></div>
+            </div>
+            <!--Vietnam-->
+            <div id="VietnamDiv" class="countrydiv">
+                <p id="Vietnam" style="font-size: 24px; font-weight: bold;">Vietnam</p>
+                <div id="Ha Tinh" class="locationwidget" name="airvisual_widget" key="666ffca0da7d326ba1703262"></div>
+                <div id="Hanoi" class="locationwidget" name="airvisual_widget" key="666ffbc62b7e8f983122a1e0"></div>
+                <div id="Ho Chi Minh City" class="locationwidget" name="airvisual_widget" key="666ffc20da7d326ba1702942"></div>
+                <div id="Bac Giang" class="locationwidget" name="airvisual_widget" key="666ffc6b2584026f967ff56e"></div>
             </div>
         </div>
         <script src="./js/script.js"></script>
         <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+        <script>
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+                }
+            }
+        </script>
         <!--Footer-->
         <div id="footer-placeholder"></div>
     </body>
