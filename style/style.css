@@ -1,15 +1,13 @@
 /*style.css*/
-.container{
+.containerflex{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 8%;
 }
 .responsive {
     max-width: 90%;
-    padding-top: 20%;
     height: auto;
 } 
 .right {
@@ -294,7 +292,33 @@ select{
     background-color: #f1f1f1;
     height: 200%;
   }
-  
+section{
+    display: flex;
+    width: 85%;
+    height: 430px;
+    margin-left: 8%;
+    margin-bottom: 4%;
+}
+section div,#prevention{
+    width: 100px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .5;
+    transition: .5s ease;
+    border-radius: 20px;
+    margin: 1%;
+}
+section div:hover{
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+section div:hover #prevention{
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
   /* Responsive columns - one column layout (vertical) on small screens */
   @media screen and (max-width: 600px) {
     .column {
