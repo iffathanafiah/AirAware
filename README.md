@@ -1,0 +1,1 @@
+AirAware is a website created and developed by Muhammad Iffat bin Hanafiah for his TWT2231-Web Techniques and Applications Coursework Individual Assignment during his Second Year in Multimedia University (MMU). This website serves for checking the Air Quality Index (AQI) for the South-East Asia (SEA) countries aswell as learning about it.
